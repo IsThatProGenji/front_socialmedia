@@ -21,7 +21,7 @@ function Upload() {
                 const fileName = response.data.public_id
 
                 Axios.post(
-                    "http://localhost:3001/upload", {
+                    "https://socialmediaqwe.herokuapp.com/upload", {
                     title: title,
                     description: description,
                     image: fileName,

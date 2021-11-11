@@ -8,7 +8,7 @@ function Register() {
 
     const register = () => {
         console.log(username);
-        Axios.post("http://localhost:3001/user/register", {
+        Axios.post("https://socialmediaqwe.herokuapp.com/user/register", {
             username: username,
             password: password,
         }).then((response) => {

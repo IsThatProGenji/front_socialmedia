@@ -13,7 +13,7 @@ function Profile() {
     useEffect(() => {
         setIsLoading(true)
         Axios.get(
-            `http://localhost:3001/upload/byUser/${localStorage.getItem("username")}`
+            `https://socialmediaqwe.herokuapp.com/upload/byUser/${localStorage.getItem("username")}`
         ).then((response) => {
             setYourUploads(response.data);
         })

@@ -16,7 +16,7 @@ function Login() {
     let history = useHistory()
 
     const Login = () => {
-        Axios.post("http://localhost:3001/user/login", {
+        Axios.post("https://socialmediaqwe.herokuapp.com/user/login", {
             username: username,
             password: password,
         }).then((response) => {

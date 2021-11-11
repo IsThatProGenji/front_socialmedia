@@ -17,7 +17,7 @@ function Home() {
     }, []);
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/upload").then((response) => {
+        Axios.get("https://socialmediaqwe.herokuapp.com/upload").then((response) => {
             setUploads(response.data);
         });
     }, []);
@@ -27,7 +27,7 @@ function Home() {
         var tempLikes = uploads;
         tempLikes[key].likes = tempLikes[key].likes + 1;
 
-        Axios.post("http://localhost:3001/upload/like", {
+        Axios.post("https://socialmediaqwe.herokuapp.com/upload/like", {
             author: localStorage.getItem("username"),
             likesid: id,
 
